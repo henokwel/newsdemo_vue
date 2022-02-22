@@ -3,7 +3,7 @@
     <h1>Quick Read</h1>
 
     <div v-for="post in article" :key="post.id">
-      <ArticleCard :textOnly="false" :item="post" />
+      <ArticleCard  :item="post" />
     </div>
   </div>
 </template>
@@ -110,18 +110,38 @@ self-driving car, according to a new report.The two companies joined
 };
 </script>
 <style scoped>
+
 #quickRContainer {
   grid-area: quickR;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 22px;
-  padding-right: 20px;
-    border-right: 1px solid #bcbcbc;
 
+  padding-right: 20px;
+  border-right: 1px solid #bcbcbc;
+  /* height: 100%; */
+ 
   /* border: 2px solid; */
   /* background-color: rgb(141, 87, 127); */
+}
+
+/* Responsivnes________  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
 }
 </style>
 

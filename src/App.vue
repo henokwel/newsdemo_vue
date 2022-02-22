@@ -37,9 +37,37 @@ export default {
   text-align: center;
   min-height: 100vh;
   /* background: grey; */
+      margin: 0 1% 0 1%;
+
 }
 
-nav {
-  grid-area: nav;
+/* Responsivnes________  */
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   #app{
+     /* background: blanchedalmond; */
+   }
+  
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #app {
+    /* background: orange; */
+    /* margin: 0 2% 0 2%; */
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #app {
+    /* background: rgb(204, 96, 114); */
+    margin: 0 4% 0 4%;
+  }
+}
+
+
 </style>

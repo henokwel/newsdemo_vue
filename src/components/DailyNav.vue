@@ -13,12 +13,13 @@
 
 <style scoped>
 nav {
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: 80px;
   font-family: "Inter", sans-serif;
-
+ 
   /* background: greenyellow; */
 }
 
@@ -50,6 +51,9 @@ nav {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  nav{
+    background: greenyellow;
+  }
    
   .navlinks {
     width: 120px;
@@ -61,16 +65,16 @@ nav {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   nav {
-    /* background: orange; */
-    margin: 0 2% 0 2%;
+    background: orange;
+    /* margin: 0 2% 0 2%; */
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   nav {
-    /* background: pink; */
-    margin: 0 5% 0 5%;
+    background: pink;
+    /* margin: 0 5% 0 5%; */
   }
 }
 </style>
