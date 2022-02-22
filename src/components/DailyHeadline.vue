@@ -14,10 +14,7 @@
 
 #headlineContainer{
     grid-area: headline;
+    /* border: 2px solid; */
 }
-section{
-    background: goldenrod;
-    /* height: 500px; */
-    /* width: 400px; */
-}
+ 
 </style>

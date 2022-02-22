@@ -1,6 +1,6 @@
 <template>
   <nav-header />
-  
+
   <router-view />
 </template>
 
@@ -8,15 +8,15 @@
 <script>
 // @ is an alias to /src
 
-import NavHeader from "@/components/NavHeader.vue";
- 
+import NavHeader from "@/components/DailyNav.vue";
 
 export default {
   name: "App",
   components: {
-    NavHeader
-  
+    NavHeader,
   },
+
+  
 };
 </script>
 
@@ -24,25 +24,24 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Open+Sans&display=swap");
-
 #app {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 80px   auto;
+  grid-template-rows: 80px auto;
   grid-template-areas:
     "nav nav nav"
     "quickR headline opinion";
-
-  margin: 0 5% 0 5%;
+    
+   margin: 0 5% 0 5%;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #2c3e50;
   min-height: 100vh;
+  /* background: grey; */
 }
 
-nav{
+nav {
   grid-area: nav;
 }
 </style>

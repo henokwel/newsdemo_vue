@@ -9,6 +9,7 @@
 
 #opinionContainer{
     grid-area: opinion;
-    background: paleturquoise;
+    /* background: paleturquoise; */
+    /* border: 2px solid; */
 }
 </style>

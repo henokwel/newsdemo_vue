@@ -10,6 +10,7 @@
 <style scoped>
 #quickRContainer{
     grid-area: quickR;
-    background-color: rgb(141, 87, 127);
+    /* border: 2px solid; */
+    /* background-color: rgb(141, 87, 127); */
 }
 </style>
