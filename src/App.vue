@@ -1,30 +1,48 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <nav-header />
+  
+  <router-view />
 </template>
 
+
+<script>
+// @ is an alias to /src
+
+import NavHeader from "@/components/NavHeader.vue";
+ 
+
+export default {
+  name: "App",
+  components: {
+    NavHeader
+  
+  },
+};
+</script>
+
+
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Open+Sans&display=swap");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 80px   auto;
+  grid-template-areas:
+    "nav nav nav"
+    "quickR headline opinion";
+
+  margin: 0 5% 0 5%;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background: #2c3e50;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+nav{
+  grid-area: nav;
 }
 </style>
