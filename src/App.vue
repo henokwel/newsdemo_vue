@@ -15,8 +15,6 @@ export default {
   components: {
     NavHeader,
   },
-
-  
 };
 </script>
 
@@ -27,12 +25,12 @@ export default {
 #app {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 80px auto;
+  grid-template-rows: 80px 50px auto;
   grid-template-areas:
     "nav nav nav"
+    ". . ."
     "quickR headline opinion";
-    
-   margin: 0 5% 0 5%;
+
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
