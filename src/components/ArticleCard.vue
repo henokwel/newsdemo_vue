@@ -22,7 +22,7 @@
     </p>
     <div id="articleAuthor">
       <span id="authorName">{{ item.author }}</span>
-      <span>{{ this.readingTime }} min read</span>
+      <span>{{ this.readingTime }}&nbsp;min&nbsp;read</span>
     </div>
   </div>
 </template>
@@ -75,6 +75,9 @@ export default {
   width: 100%;
 }
 
+#title{
+  margin-top: 0;
+}
 #title a {
   text-decoration: none;
   color: black;
@@ -105,11 +108,6 @@ export default {
   /* background: red; */
 }
 
-#articleAuthor span:nth-child(2){
-  width: 20ch;
-  background: red;
-  
-}
 
 #authorName {
   height: 30px;
@@ -150,6 +148,4 @@ export default {
   width: 330px;
   margin: 10px;
 }
-
- 
 </style>
