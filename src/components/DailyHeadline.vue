@@ -3,13 +3,13 @@
     <!-- <ArticleCard :item="" /> -->
     <div id="topHeadline">
       <!-- big card -->
-      <div id="bigHeadline" v-for="(post, index) in topHeadline" :key="index">
+      <div id="bigHeadline" v-for="(post, index) in reverseArticles" :key="index">
         <ArticleCard :item="post" :mediaCard="true" />
       </div>
 
       <!-- small card with horizontal scroll -->
       <div id="bigHeadlineText">
-        <div v-for="(post, index) in miniHeadline" :key="index">
+        <div v-for="(post, index) in headlineArticles" :key="index">
           <ArticleCard :miniCard="true" :miniMedia="true" :item="post" />
         </div>
       </div>
@@ -29,122 +29,28 @@ export default {
   props: {
     headlineArticles: Array,
   },
-  data() {
+
+  computed:{
+    reverseArticles(){
+       let newArt =  this.headlineArticles
+       return newArt.slice(15).reverse()
+    }
+  },
+   data() {
     return {
-      topHeadline: [
+      stories: [
         {
-          source: {
-            id: null,
-            name: "Cult of Mac",
-          },
-          author: "Killian Bell",
-          title:
-            "Apple tasks South Korean firm with building autopilot chips for its first car",
-          description: `Apple will use autopilot chips built by a South Korean firm in its first self-driving
-             car, according to a new report. The two companies joined forces around a year ago and are 
-            said to be working on a chipset package that is likely to include a CPU, GPU, memor…`,
-          url: "https://www.cultofmac.com/767354/apple-car-autopilot-chips/",
-          urlToImage:
-            "https://cdn.cultofmac.com/wp-content/uploads/2021/12/vanamara-apple-car-concept4.jpg",
-          publishedAt: "2022-02-22T14:08:15Z",
-          content: `Apple will use autopilot chips built by a South Korean firm in its first
-self-driving car, according to a new report.The two companies joined
-             self-driving car, according to a new report.The two companies joined
-             self-driving car, according to a new report.The two companies joined
-             
-              forces around a year ago and are said to be working on `,
+          author: "The Editorial Board",
+          title: "WSJ: New Cold War Arrives...",
+          description:
+            "WSJ: New Cold War Arrives  (Top headline, 4th story, link)  Related stories:PUTIN STAKES CLAIM TO VAST NEW TERRITORY. 'REMINISCENT OF HITLER' 'Peacekeeping' tanks roll into Ukraine...\r\nZelensky hints at pursuing nukes...\r\nHow Bid…",
+          content:
+            "Who in the Lords name does Putin think gives him the right to declare new so-called countries? President Biden asked Tuesday in announcing new sanctions against Russia. The answer is a complacent Wes… [+373 chars]",
         },
       ],
-      miniHeadline: [
-        {
-          source: {
-            id: null,
-            name: "Cult of Mac",
-          },
-          author: "Killian Bell",
-          title:
-            "Apple tasks South Korean firm with building autopilot chips for its first car",
-          description: `Apple will use autopilot chips built by a South Korean firm in its first self-driving
-             car, according to a new report. The two companies joined forces around a year ago and are 
-            said to be working on a chipset package that is likely to include a CPU, GPU, memor…`,
-          url: "https://www.cultofmac.com/767354/apple-car-autopilot-chips/",
-          urlToImage:
-            "https://cdn.cultofmac.com/wp-content/uploads/2021/12/vanamara-apple-car-concept4.jpg",
-          publishedAt: "2022-02-22T14:08:15Z",
-          content: `Apple will use autopilot chips built by a South Korean firm in its first
-self-driving car, according to a new report.The two companies joined
-             self-driving car, according to a new report.The two companies joined
-             self-driving car, according to a new report.The two companies joined
-             
-              forces around a year ago and are said to be working on `,
-        },
-        {
-          source: {
-            id: null,
-            name: "Cult of Mac",
-          },
-          author: "Killian Bell",
-          title:
-            "Google tasks South Korean firm with building autopilot chips for its first car",
-          description: `Apple will use autopilot chips built by a South Korean firm in its first self-driving
-             car, according to a new report. The two companies joined forces around a year ago and are 
-            said to be working on a chipset package that is likely to include a CPU, GPU, memor…`,
-          url: "https://www.cultofmac.com/767354/apple-car-autopilot-chips/",
-          urlToImage:
-            "https://cdn.cultofmac.com/wp-content/uploads/2021/12/vanamara-apple-car-concept4.jpg",
-          publishedAt: "2022-02-22T14:08:15Z",
-          content: `Apple will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on `,
-        },
-        {
-          source: {
-            id: null,
-            name: "Cult of Mac",
-          },
-          author: "Killian Bell",
-          title:
-            "Microsoft tasks South Korean firm with building autopilot chips for its first car",
-          description: `Apple will use autopilot chips built by a South Korean firm in its first self-driving
-             car, according to a new report. The two companies joined forces around a year ago and are 
-            said to be working on a chipset package that is likely to include a CPU, GPU, memor…`,
-          url: "https://www.cultofmac.com/767354/apple-car-autopilot-chips/",
-          urlToImage:
-            "https://cdn.cultofmac.com/wp-content/uploads/2021/12/vanamara-apple-car-concept4.jpg",
-          publishedAt: "2022-02-22T14:08:15Z",
-          content: `Henok will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on 
-              Apple will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on 
-              Apple will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on 
-              Apple will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on `,
-        },
-        {
-          source: {
-            id: null,
-            name: "Cult of Mac",
-          },
-          author: "Killian Bell",
-          title:
-            "Amazon tasks South Korean firm with building autopilot chips for its first car",
-          description: `Apple will use autopilot chips built by a South Korean firm in its first self-driving
-             car, according to a new report. The two companies joined forces around a year ago and are 
-            said to be working on a chipset package that is likely to include a CPU, GPU, memor…`,
-          url: "https://www.cultofmac.com/767354/apple-car-autopilot-chips/",
-          urlToImage:
-            "https://cdn.cultofmac.com/wp-content/uploads/2021/12/vanamara-apple-car-concept4.jpg",
-          publishedAt: "2022-02-22T14:08:15Z",
-          content: `Apple will use autopilot chips built by a South Korean firm in its first
-             self-driving car, according to a new report.\r\nThe two companies joined
-              forces around a year ago and are said to be working on `,
-        },
-      ],
+      topHeadline: this.headlineArticles,
+
+      miniHeadline: this.headlineArticles,
     };
   },
 };

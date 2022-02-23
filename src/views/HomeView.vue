@@ -1,7 +1,7 @@
 <template>
-  <daily-headline />
-  <quick-read />
-  <opinion-section />
+  <DailyHeadline :headlineArticles="headlineArticles" />
+  <QuickRead :quickReadArticles="quickReadArticles" />
+  <OpinionSection :opinionArticles="opinionArticles" />
 </template>
 
 <script>
@@ -21,7 +21,9 @@ export default {
 
   data() {
     return {
-      articles: [],
+      headlineArticles: [],
+      opinionArticles: [],
+      quickReadArticles: [],
     };
   },
   created() {
@@ -33,11 +35,15 @@ export default {
         `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
       );
       const data = await res.json();
-      console.log(data);
-
+ 
       if (data.status === "ok") {
-        this.articles = data.articles;
+        this.headlineArticles = await data.articles;
+        this.opinionArticles = await data.articles;
+        this.quickReadArticles = await data.articles;
       }
+      // console.log("headline", this.headlineArticles);
+      // console.log("opinion", this.opinionArticles);
+      // console.log("quick", this.quickReadArticles);
     },
   },
 };

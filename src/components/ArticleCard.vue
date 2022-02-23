@@ -101,11 +101,21 @@ export default {
   justify-content: space-between;
   color: #858585;
   margin: 0 5px 30px 0;
+
   /* background: red; */
 }
 
-#authorName{
-  max-width: 35ch;
+#articleAuthor span:nth-child(2){
+  width: 20ch;
+  background: red;
+  
+}
+
+#authorName {
+  height: 30px;
+  min-width: 30ch;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
 }
 /* Article with any media content */
 .mediaContainer {
@@ -140,4 +150,6 @@ export default {
   width: 330px;
   margin: 10px;
 }
+
+ 
 </style>
