@@ -21,8 +21,8 @@
       {{ item.content }}
     </p>
     <div id="articleAuthor">
-      <span>{{ item.author }}</span>
-      <span>{{ this.readingTime }}m read</span>
+      <span id="authorName">{{ item.author }}</span>
+      <span>{{ this.readingTime }} min read</span>
     </div>
   </div>
 </template>
@@ -50,10 +50,9 @@ export default {
   computed: {
     readingTime() {
       const text = this.item.content;
-      const wpm = 120;
+      const wpm = 35;
       const words = text.trim().split(/\s+/).length;
       const time = Math.ceil(words / wpm);
-
       return time;
     },
   },
@@ -101,14 +100,18 @@ export default {
   display: flex;
   justify-content: space-between;
   color: #858585;
+  margin: 0 5px 30px 0;
   /* background: red; */
 }
 
+#authorName{
+  max-width: 35ch;
+}
 /* Article with any media content */
 .mediaContainer {
   min-width: 80%;
-  
-    /* min-height: 450px; */
+
+  /* min-height: 450px; */
   /* background: red; */
 }
 
@@ -129,15 +132,10 @@ export default {
 
   letter-spacing: 0.02em;
 }
- 
-
-.mediaContainer #articleAuthor{
-  margin-bottom: 30px;
-}
 
 /* Articles with smaller content */
 
-.miniCardContainer{
+.miniCardContainer {
   /* background: rgb(99, 66, 72); */
   width: 330px;
   margin: 10px;

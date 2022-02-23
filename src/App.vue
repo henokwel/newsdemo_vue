@@ -37,29 +37,10 @@ export default {
   text-align: center;
   min-height: 100vh;
   /* background: grey; */
-      margin: 0 1% 0 1%;
-
+  margin: 0 1% 0 1%;
 }
 
-/* Responsivnes________  */
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-   #app{
-     /* background: blanchedalmond; */
-   }
-  
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  #app {
-    /* background: orange; */
-    /* margin: 0 2% 0 2%; */
-  }
-}
+    /* Responsivnes________  
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -68,6 +49,31 @@ export default {
     margin: 0 4% 0 4%;
   }
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  #app {
+    /* background: orange; */
 
+    grid-template-columns: 2fr 1.3fr;
+    grid-template-areas:
+      "nav nav"
+      ". . "
+      "headline quickR"
+      "opinion  quickR";
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 760px) {
+  #app {
+    /* background: blanchedalmond; */
+    grid-template-columns: 2fr;
 
+    grid-template-areas:
+      "nav "
+      ". "
+      "headline"
+      "opinion"
+      "quickR";
+  }
+}
 </style>

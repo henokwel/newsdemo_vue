@@ -52,7 +52,7 @@ nav {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   nav{
-    background: greenyellow;
+    /* background: greenyellow; */
   }
    
   .navlinks {
@@ -65,7 +65,7 @@ nav {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   nav {
-    background: orange;
+    /* background: orange; */
     /* margin: 0 2% 0 2%; */
   }
 }
@@ -73,7 +73,7 @@ nav {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   nav {
-    background: pink;
+    /* background: pink; */
     /* margin: 0 5% 0 5%; */
   }
 }

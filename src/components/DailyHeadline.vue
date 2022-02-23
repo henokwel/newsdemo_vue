@@ -27,7 +27,7 @@ import ArticleCard from "./ArticleCard.vue";
 export default {
   components: { ArticleCard },
   props: {
-    // articles: Array,
+    headlineArticles: Array,
   },
   data() {
     return {
