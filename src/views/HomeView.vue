@@ -37,10 +37,6 @@ export default {
           `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
         );
         const data = await res.json();
-        console.log(data);
-
-        console.log("NewData", NewData);
-
         this.headlineArticles = await data.articles;
         this.opinionArticles = await data.articles;
         this.quickReadArticles = await data.articles;
@@ -49,11 +45,7 @@ export default {
         this.opinionArticles = NewData;
         this.quickReadArticles = NewData;
 
-        console.log("Static Data in use", error);
-      }
-      // console.log("headline", this.headlineArticles);
-      // console.log("opinion", this.opinionArticles);
-      // console.log("quick", this.quickReadArticles);
+       }
     },
   },
 };
