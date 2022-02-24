@@ -40,16 +40,13 @@ export default {
         this.headlineArticles = await data.articles;
         this.opinionArticles = await data.articles;
         this.quickReadArticles = await data.articles;
+
       } catch (error) {
+        
         this.headlineArticles = NewData;
         this.opinionArticles = NewData;
         this.quickReadArticles = NewData;
-
-        console.log("Static Data in use", error);
       }
-      // console.log("headline", this.headlineArticles);
-      // console.log("opinion", this.opinionArticles);
-      // console.log("quick", this.quickReadArticles);
     },
   },
 };
